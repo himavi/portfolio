@@ -1,4 +1,6 @@
 import { Reveal, TextReveal } from "@/components/motion/reveal";
+import { SmoothLink } from "@/components/smooth-link";
+import { HeroBackdrop } from "@/components/three/hero-backdrop";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
@@ -8,7 +10,8 @@ export function Hero() {
       aria-label="Introduction"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6"
     >
-      {/* Phase B mounts the neural-network canvas behind this content. */}
+      <HeroBackdrop />
+
       <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center text-center">
         <Reveal>
           <p className="font-mono text-xs tracking-[0.3em] text-accent uppercase">
@@ -28,12 +31,12 @@ export function Hero() {
 
         <Reveal delay={0.25}>
           <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
-            <a
+            <SmoothLink
               href="#projects"
               className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
             >
               View Work
-            </a>
+            </SmoothLink>
             <a
               href={siteConfig.resumeHref}
               target="_blank"

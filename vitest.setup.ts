@@ -38,3 +38,8 @@ class MockResizeObserver {
   disconnect = vi.fn();
 }
 vi.stubGlobal("ResizeObserver", MockResizeObserver);
+
+// jsdom has no real rAF; stub a no-op so animation loops (framer-motion, Lenis)
+// don't run or crash during tests.
+vi.stubGlobal("requestAnimationFrame", () => 0);
+vi.stubGlobal("cancelAnimationFrame", () => {});

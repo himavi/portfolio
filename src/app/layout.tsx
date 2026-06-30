@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ReducedMotionProvider } from "@/components/providers/reduced-motion-provider";
+import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { DebugBadge } from "@/components/debug-badge";
@@ -45,18 +46,20 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <ReducedMotionProvider>
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:text-fg"
-          >
-            Skip to content
-          </a>
-          <Nav />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <DebugBadge />
+          <SmoothScrollProvider>
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:text-fg"
+            >
+              Skip to content
+            </a>
+            <Nav />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+            <DebugBadge />
+          </SmoothScrollProvider>
         </ReducedMotionProvider>
       </body>
     </html>

@@ -39,7 +39,11 @@ export function ReducedMotionProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const reduced = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const reduced = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot,
+  );
 
   return (
     <ReducedMotionContext.Provider value={reduced}>

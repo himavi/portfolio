@@ -35,12 +35,6 @@
     color-scheme: dark;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-
   body {
     background-color: var(--color-background);
     color: var(--color-fg);
@@ -58,4 +52,22 @@
     outline-offset: 2px;
     border-radius: 2px;
   }
+}
+
+/* Lenis smooth scroll — active only when JS mounts it (off under reduced motion). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }

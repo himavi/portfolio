@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { navSections, siteConfig } from "@/lib/site";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useReducedMotionPref } from "@/components/providers/reduced-motion-provider";
+import { SmoothLink } from "@/components/smooth-link";
 import { cn } from "@/lib/utils";
 
 export function Nav() {
@@ -43,18 +44,18 @@ export function Nav() {
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 sm:px-8"
       >
-        <a
+        <SmoothLink
           href="#hero"
           className="font-display text-sm font-semibold tracking-tight text-fg"
         >
           {siteConfig.shortName}
           <span className="sr-only"> — {siteConfig.name}, back to top</span>
-        </a>
+        </SmoothLink>
 
         <ul className="hidden items-center gap-8 md:flex">
           {navSections.map((s) => (
             <li key={s.id}>
-              <a
+              <SmoothLink
                 href={`#${s.id}`}
                 aria-current={active === s.id ? "page" : undefined}
                 className={cn(
@@ -63,7 +64,7 @@ export function Nav() {
                 )}
               >
                 {s.label}
-              </a>
+              </SmoothLink>
             </li>
           ))}
         </ul>
@@ -126,7 +127,7 @@ export function Nav() {
             <ul className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-4">
               {navSections.map((s) => (
                 <li key={s.id}>
-                  <a
+                  <SmoothLink
                     href={`#${s.id}`}
                     onClick={() => setOpen(false)}
                     aria-current={active === s.id ? "page" : undefined}
@@ -136,7 +137,7 @@ export function Nav() {
                     )}
                   >
                     {s.label}
-                  </a>
+                  </SmoothLink>
                 </li>
               ))}
               <li>
