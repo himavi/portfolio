@@ -48,7 +48,7 @@ const fragmentShader = /* glsl */ `
     vec2 c = gl_PointCoord - 0.5;
     float d = length(c);
     float alpha = smoothstep(0.5, 0.0, d);
-    gl_FragColor = vec4(uColor, alpha * vAlpha * 0.9);
+    gl_FragColor = vec4(uColor, alpha * vAlpha * 0.5);
   }
 `;
 
@@ -66,7 +66,7 @@ export function NeuralField({ tier }: { tier: DeviceTier }) {
       uTime: { value: 0 },
       uPointer: { value: new Vector2(0, 0) },
       uColor: { value: new Color("#5cc8ff") },
-      uSize: { value: 24 },
+      uSize: { value: 18 },
     }),
     [],
   );

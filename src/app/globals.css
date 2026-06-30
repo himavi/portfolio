@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces — dark base, generous contrast headroom */
-  --color-background: #07080a;
-  --color-surface: #0e1014;
-  --color-border: #232833;
-  --color-muted: #9aa3b2;
-  --color-fg: #e8ecf4;
+  /* Surfaces — black base, neutral greys */
+  --color-background: #0a0a0b;
+  --color-surface: #161618;
+  --color-border: #2a2a2e;
+  --color-muted: #a1a1aa;
+  --color-fg: #f4f4f5;
 
-  /* Single restrained accent (cool azure) */
-  --color-accent: #5cc8ff;
-  --color-accent-foreground: #04121c;
+  /* Single accent (red) — red / white / black scheme */
+  --color-accent: #ff3b3b;
+  --color-accent-foreground: #0a0a0b;
 
   /* Radius scale */
   --radius-sm: 0.375rem;

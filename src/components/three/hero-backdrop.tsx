@@ -24,8 +24,9 @@ export function HeroBackdrop() {
       ) : (
         <HeroPoster />
       )}
-      {/* Contrast scrim so hero text stays legible over the field. */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,var(--color-background)_82%)]" />
+      {/* Darken behind the hero text for contrast, fade the field into the page. */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_50%_42%,color-mix(in_oklab,var(--color-background)_72%,transparent),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background" />
     </div>
   );
 }
