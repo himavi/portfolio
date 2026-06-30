@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Himavi — AI/ML Engineer",
+  title: "Himanshu Kumar Singh — AI/ML Engineer",
   description:
-    "Portfolio of Himavi, an AI/ML engineer building cinematic, intelligent web experiences.",
+    "Portfolio of Himanshu Kumar Singh, an AI/ML engineer building cinematic, intelligent web experiences.",
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ export default function Home() {
         Portfolio
       </p>
       <h1 className="text-4xl font-semibold tracking-tight text-zinc-50 sm:text-6xl">
-        Himavi
+        Himanshu Kumar Singh
       </h1>
       <p className="mt-4 text-lg text-zinc-400 sm:text-xl">AI/ML Engineer</p>
     </main>
