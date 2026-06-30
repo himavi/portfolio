@@ -1,6 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { ReducedMotionProvider } from "@/components/providers/reduced-motion-provider";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { DebugBadge } from "@/components/debug-badge";
+import { siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +17,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Himanshu Kumar Singh — AI/ML Engineer",
-  description:
-    "Portfolio of Himanshu Kumar Singh, an AI/ML engineer building cinematic, intelligent web experiences.",
+  title: `${siteConfig.name} — ${siteConfig.role}`,
+  description: `Portfolio of ${siteConfig.name}, an ${siteConfig.role} building cinematic, intelligent web experiences.`,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#07080a",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -26,10 +41,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-zinc-950 text-zinc-100">
-        {children}
+      <body className="flex min-h-full flex-col">
+        <ReducedMotionProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:text-fg"
+          >
+            Skip to content
+          </a>
+          <Nav />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <DebugBadge />
+        </ReducedMotionProvider>
       </body>
     </html>
   );

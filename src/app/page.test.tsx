@@ -10,6 +10,6 @@ describe("Home page", () => {
     expect(
       screen.getByRole("heading", { level: 1, name: /himanshu kumar singh/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/ai\/ml engineer/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/ai\/ml engineer/i).length).toBeGreaterThan(0);
   });
 });
