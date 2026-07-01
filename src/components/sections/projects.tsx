@@ -3,10 +3,11 @@ import { Section } from "@/components/section";
 
 const projects: {
   title: string;
+  subtitle?: string;
   summary: string;
   tags: string[];
-  liveUrl: string;
-  githubUrl: string;
+  liveUrl: string | null;
+  githubUrl: string | null;
   credentials?: { user: string; pass: string };
 }[] = [
   {
@@ -16,6 +17,15 @@ const projects: {
     tags: ["React", "Node.js", "MongoDB", "RAG", "REST API"],
     liveUrl: "https://examsense-six.vercel.app",
     githubUrl: "https://github.com/himavi/examsense",
+  },
+  {
+    title: "Smart Product Pricing",
+    subtitle: "Amazon ML Challenge 2025",
+    summary:
+      "Multimodal ML system for optimal product price prediction. Extracted image embeddings using a Vision Transformer (ViT) for visual pricing cues, generated semantic text embeddings from product titles and descriptions using Sentence T5, then fused both modalities and trained a regression layer. Trained and evaluated on 75k labeled products with price predictions generated for 75k unseen samples under strict evaluation constraints.",
+    tags: ["Python", "ViT", "Sentence-T5", "Multimodal ML", "PyTorch"],
+    liveUrl: null,
+    githubUrl: null,
   },
   {
     title: "AI Web Penetration Tester",
@@ -72,9 +82,16 @@ export function Projects() {
           <li key={project.title}>
             <Reveal delay={index * 0.08}>
               <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface/50 p-5 transition-colors hover:border-accent/60 sm:p-7">
-                <h3 className="font-display text-xl font-semibold text-fg">
-                  {project.title}
-                </h3>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-fg">
+                    {project.title}
+                  </h3>
+                  {project.subtitle && (
+                    <p className="mt-0.5 font-mono text-xs text-muted">
+                      {project.subtitle}
+                    </p>
+                  )}
+                </div>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
                   {project.summary}
                 </p>
@@ -89,22 +106,26 @@ export function Projects() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-opacity hover:opacity-80"
-                  >
-                    Live demo <ExternalIcon />
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-fg"
-                  >
-                    GitHub <GithubIcon />
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-opacity hover:opacity-80"
+                    >
+                      Live demo <ExternalIcon />
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-fg"
+                    >
+                      GitHub <GithubIcon />
+                    </a>
+                  )}
                 </div>
                 {project.credentials && (
                   <div className="mt-4 rounded-lg border border-border bg-background px-4 py-3 font-mono text-xs text-muted">

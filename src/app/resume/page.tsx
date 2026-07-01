@@ -213,6 +213,16 @@ export default function ResumePage() {
         {/* Projects */}
         <Section title="Projects">
           <Project
+            title="Smart Product Pricing — Amazon ML Challenge 2025"
+            stack="Python, PyTorch, ViT, Sentence-T5, Multimodal ML"
+            points={[
+              "Extracted image embeddings using a Vision Transformer (ViT) to capture visual cues influencing product pricing.",
+              "Generated semantic text embeddings from product titles and descriptions using Sentence-T5 for contextual understanding.",
+              "Fused multimodal embeddings and trained a final regression layer to predict optimal product prices.",
+              "Trained and evaluated the model on 75k labeled products and generated price predictions for 75k unseen samples under strict evaluation constraints.",
+            ]}
+          />
+          <Project
             title="ExamSense — AI-Powered Study Platform"
             href="https://examsense-six.vercel.app"
             stack="Python, React, Node.js, Express, SQLite, Groq LLM"
