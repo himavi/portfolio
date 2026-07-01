@@ -119,7 +119,7 @@ export default function ResumePage() {
             <h1 className="text-2xl font-semibold tracking-tight text-neutral-900">
               Himanshu Kumar Singh
             </h1>
-            <p className="mt-0.5 text-sm text-neutral-400">Last updated Jun 2025</p>
+            <p className="mt-0.5 text-sm text-neutral-400">Last updated Jun 2026</p>
           </div>
           <div className="text-sm text-neutral-500 sm:text-right">
             <p>
