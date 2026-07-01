@@ -1,7 +1,14 @@
 import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/section";
 
-const projects = [
+const projects: {
+  title: string;
+  summary: string;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+  credentials?: { user: string; pass: string };
+}[] = [
   {
     title: "ExamSense",
     summary:
@@ -17,6 +24,7 @@ const projects = [
     tags: ["Python", "FastAPI", "LLM", "OWASP ZAP", "Docker"],
     liveUrl: "https://hkfdihjebfvhdfbvgre-ai-pentester.hf.space/",
     githubUrl: "https://github.com/himavi/webpenetration",
+    credentials: { user: "recruiter", pass: "4n57wrlc9cVG" },
   },
 ];
 
@@ -98,6 +106,20 @@ export function Projects() {
                     GitHub <GithubIcon />
                   </a>
                 </div>
+                {project.credentials && (
+                  <div className="mt-4 rounded-lg border border-border bg-background px-4 py-3 font-mono text-xs text-muted">
+                    <span className="mb-1 block font-sans text-[11px] uppercase tracking-wider text-muted/70">
+                      Demo credentials
+                    </span>
+                    <span className="text-fg">
+                      {project.credentials.user}
+                    </span>
+                    <span className="mx-1.5 text-border">/</span>
+                    <span className="text-fg">
+                      {project.credentials.pass}
+                    </span>
+                  </div>
+                )}
               </article>
             </Reveal>
           </li>
