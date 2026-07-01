@@ -5,16 +5,16 @@ const projects = [
   {
     title: "ExamSense",
     summary:
-      "A smart exam management platform that lets educators create, schedule, and auto-grade assessments. Built with a JavaScript frontend and a clean REST API backend — designed for speed, simplicity, and reliable delivery under real exam conditions.",
-    tags: ["JavaScript", "Next.js", "REST API", "Full Stack"],
+      "A full-stack exam management platform for educators — create, schedule, and auto-grade assessments with a RAG-powered assistant that answers student queries from course material in real time. Built with a React frontend, Node.js/Express backend, and MongoDB.",
+    tags: ["React", "Node.js", "MongoDB", "RAG", "REST API"],
     liveUrl: "https://examsense-six.vercel.app",
     githubUrl: "https://github.com/himavi/examsense",
   },
   {
     title: "AI Web Penetration Tester",
     summary:
-      "An LLM-powered red-team agent that autonomously scans web targets, identifies common vulnerabilities (SQLi, XSS, open ports, misconfigurations), and generates structured security reports. Runs entirely in a sandboxed environment on Hugging Face Spaces.",
-    tags: ["Python", "LLM", "Security", "Docker", "Hugging Face"],
+      "An autonomous red-team agent that runs seven security engines (OWASP ZAP, Nuclei, sqlmap, Nikto, Semgrep) against a target, merges findings into a unified schema, and produces AI-generated explanations and remediation via Groq/Gemini. Ships as a single Docker container on Hugging Face Spaces.",
+    tags: ["Python", "FastAPI", "LLM", "OWASP ZAP", "Docker"],
     liveUrl: "https://hkfdihjebfvhdfbvgre-ai-pentester.hf.space/",
     githubUrl: "https://github.com/himavi/webpenetration",
   },
