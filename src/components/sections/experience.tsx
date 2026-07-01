@@ -3,14 +3,14 @@ import { Section } from "@/components/section";
 
 const roles = [
   {
-    role: "Software Engineering Intern – RPC Load Balancer",
+    role: "Software Engineering Intern",
     org: "Jio Platforms Limited",
     period: "Dec 2025 – Feb 2026",
     points: [
-      "Built a production-grade Ethereum JSON-RPC load balancer with intelligent routing, circuit breaking, and failover mechanisms.",
-      "Implemented Redis-based caching and request deduplication to reduce latency and optimize throughput.",
-      "Designed health-check systems with automatic provider monitoring and failure recovery.",
-      "Integrated observability using Prometheus and Grafana for real-time metrics and alerting.",
+      "Built a production grade Ethereum JSON RPC load balancer with intelligent routing, circuit breaking, and failover mechanisms.",
+      "Implemented Redis based caching and request deduplication to reduce latency and improve throughput.",
+      "Designed health check systems with automatic provider monitoring and failure recovery.",
+      "Integrated observability using Prometheus and Grafana for real time metrics and alerting.",
     ],
   },
   {
@@ -18,8 +18,8 @@ const roles = [
     org: "IIT Jammu",
     period: "May 2025 – Jul 2025",
     points: [
-      "Built a MERN stack Lost & Found platform adopted by 500+ students, enabling real-time item reporting, search, and claim tracking.",
-      "Improved frontend responsiveness by 40% using React.js and Tailwind CSS; developed 12+ RESTful APIs secured with JWT authentication.",
+      "Built a MERN stack Lost and Found platform adopted by 500+ students, enabling real time item reporting, search, and claim tracking.",
+      "Improved frontend responsiveness by 40% using React.js and Tailwind CSS and developed 12+ RESTful APIs secured with JWT authentication.",
       "Modeled 5+ MongoDB collections, integrated image uploads via Cloudinary, and automated email notifications achieving a 95% delivery rate.",
       "Collaborated with IIT Jammu mentors and managed version control and production deployment using Git.",
     ],

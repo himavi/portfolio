@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "HKS",
   role: "Full Stack & AI/ML Engineer",
   valueProp:
-    "I build end-to-end intelligent systems — production ML pipelines, full-stack web applications, and everything in between.",
+    "I build end to end intelligent systems, from production ML pipelines and full stack web apps to everything in between.",
   url: "https://example.com",
   email: "himakumarsingh@gmail.com",
   socials: {

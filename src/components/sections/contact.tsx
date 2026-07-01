@@ -8,9 +8,9 @@ export function Contact() {
       <Reveal>
         <div className="max-w-xl">
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m actively looking for full-stack and AI/ML engineering
+            I&apos;m actively looking for full stack and AI/ML engineering
             roles. If you&apos;re building something ambitious and want someone
-            who can own it end-to-end, let&apos;s talk.
+            who can own it from start to finish, feel free to reach out.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
