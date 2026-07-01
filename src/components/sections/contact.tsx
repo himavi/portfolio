@@ -8,9 +8,9 @@ export function Contact() {
       <Reveal>
         <div className="max-w-xl">
           <p className="text-lg leading-relaxed text-muted">
-            Open to AI/ML roles and interesting problems. The fastest way to
-            reach me is email — a full contact form with validation and spam
-            protection ships in Phase C.
+            I&apos;m actively looking for full-stack and AI/ML engineering
+            roles. If you&apos;re building something ambitious and want someone
+            who can own it end-to-end — let&apos;s talk.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

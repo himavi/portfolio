@@ -1,19 +1,15 @@
 export const siteConfig = {
   name: "Himanshu Kumar Singh",
   shortName: "HKS",
-  role: "AI/ML Engineer",
+  role: "Full Stack & AI/ML Engineer",
   valueProp:
-    "I design and ship machine-learning systems — from research notebooks to production inference at scale.",
-  // TODO(user): set to the real Vercel/custom domain once deployed.
+    "I build end-to-end intelligent systems — production ML pipelines, full-stack web applications, and everything in between.",
   url: "https://example.com",
-  // TODO(user): replace with a real, monitored inbox before launch.
-  email: "hello@example.com",
+  email: "himakumarsingh@gmail.com",
   socials: {
     github: "https://github.com/himavi",
-    // TODO(user): replace with your real LinkedIn handle.
     linkedin: "https://www.linkedin.com/in/your-handle",
   },
-  // TODO(user): add public/resume.pdf (or update this path).
   resumeHref: "/resume.pdf",
 } as const;
 
@@ -22,7 +18,6 @@ export interface NavSection {
   label: string;
 }
 
-/** Sections that appear in the nav and drive scroll-spy / scroll-to. */
 export const navSections: NavSection[] = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },

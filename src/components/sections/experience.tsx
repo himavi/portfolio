@@ -3,21 +3,23 @@ import { Section } from "@/components/section";
 
 const roles = [
   {
-    role: "Senior ML Engineer",
-    org: "[Company]",
+    role: "Full Stack & AI/ML Engineer",
+    org: "Freelance / Independent",
     period: "2023 — Present",
     points: [
-      "[Placeholder] Led model training and evaluation for a production NLP system.",
-      "[Placeholder] Owned the serving stack and cut p95 inference latency.",
+      "Designed and shipped production web applications integrating LLM-powered features — from architecture through deployment.",
+      "Built an autonomous AI penetration-testing agent (Python, Docker, Hugging Face Spaces) capable of identifying web vulnerabilities and generating actionable security reports.",
+      "Developed ExamSense, a full-stack exam management platform, handling both frontend UX and backend API design.",
     ],
   },
   {
-    role: "Machine Learning Engineer",
-    org: "[Company]",
-    period: "2021 — 2023",
+    role: "AI/ML Project Developer",
+    org: "Academic & Open Source",
+    period: "2022 — 2023",
     points: [
-      "[Placeholder] Built data and training pipelines from the ground up.",
-      "[Placeholder] Shipped experiments to production with monitoring.",
+      "Built RedSeaCatchAI — automated reef fisheries monitoring using YOLOv11-seg and biomass estimation for marine conservation research.",
+      "Developed IntelliDocs — an OpenAI-powered PDF Q&A tool with OCR support for scanned documents.",
+      "Completed JP Morgan Advanced Software Engineering programme (Forage), contributing to financial data tooling.",
     ],
   },
 ];
@@ -35,7 +37,8 @@ export function Experience() {
             <Reveal delay={index * 0.05}>
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                 <h3 className="font-display text-lg font-semibold text-fg">
-                  {role.role} <span className="text-muted">· {role.org}</span>
+                  {role.role}{" "}
+                  <span className="text-muted">· {role.org}</span>
                 </h3>
                 <p className="font-mono text-xs tracking-wide text-muted">
                   {role.period}

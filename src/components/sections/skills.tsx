@@ -2,13 +2,29 @@ import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/section";
 
 const groups = [
-  { label: "Languages", items: ["Python", "TypeScript", "SQL", "C++"] },
   {
-    label: "ML / DL",
-    items: ["PyTorch", "TensorFlow", "scikit-learn", "Hugging Face"],
+    label: "Languages",
+    items: ["Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS"],
   },
-  { label: "MLOps", items: ["Docker", "Kubernetes", "MLflow", "W&B"] },
-  { label: "Platform", items: ["AWS", "FastAPI", "PostgreSQL", "Ray"] },
+  {
+    label: "AI / ML",
+    items: [
+      "PyTorch",
+      "Hugging Face",
+      "LangChain",
+      "OpenAI API",
+      "scikit-learn",
+      "YOLO",
+    ],
+  },
+  {
+    label: "Full Stack",
+    items: ["Next.js", "React", "Node.js", "FastAPI", "REST APIs", "MongoDB"],
+  },
+  {
+    label: "DevOps & Cloud",
+    items: ["Docker", "Vercel", "Hugging Face Spaces", "Git", "Linux"],
+  },
 ];
 
 export function Skills() {
