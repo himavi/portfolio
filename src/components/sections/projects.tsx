@@ -66,12 +66,12 @@ function GithubIcon() {
 
 export function Projects() {
   return (
-    <Section id="projects" eyebrow="03 — Work" title="Selected work">
-      <ul className="grid gap-8 sm:grid-cols-2">
+    <Section id="projects" eyebrow="Work" title="Selected work">
+      <ul className="grid gap-6 sm:grid-cols-2 sm:gap-8">
         {projects.map((project, index) => (
           <li key={project.title}>
             <Reveal delay={index * 0.08}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface/50 p-7 transition-colors hover:border-accent/60">
+              <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface/50 p-5 transition-colors hover:border-accent/60 sm:p-7">
                 <h3 className="font-display text-xl font-semibold text-fg">
                   {project.title}
                 </h3>
@@ -88,7 +88,7 @@ export function Projects() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex items-center gap-4">
+                <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
                   <a
                     href={project.liveUrl}
                     target="_blank"

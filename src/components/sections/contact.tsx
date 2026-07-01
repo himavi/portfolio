@@ -12,10 +12,10 @@ export function Contact() {
             roles. If you&apos;re building something ambitious and want someone
             who can own it from start to finish, feel free to reach out.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
             >
               Email me
             </a>
@@ -23,7 +23,7 @@ export function Contact() {
               href={siteConfig.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
+              className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
             >
               GitHub
             </a>
@@ -31,7 +31,7 @@ export function Contact() {
               href={siteConfig.socials.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
+              className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
             >
               LinkedIn
             </a>

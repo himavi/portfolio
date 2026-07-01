@@ -8,8 +8,10 @@ import { siteConfig } from "@/lib/site";
 // data URI can't read CSS variables. Keep them in sync.
 const ACCENT = "#ff3b3b";
 
-const HIGHLIGHT_MASK =
+const MASK_DESKTOP =
   "radial-gradient(circle 160px at var(--x) var(--y), #000 0%, rgba(0,0,0,0.35) 45%, transparent 72%)";
+const MASK_TOUCH =
+  "radial-gradient(circle 90px at var(--x) var(--y), #000 0%, rgba(0,0,0,0.35) 45%, transparent 72%)";
 
 /** A tightly tiled "HKS" SVG background, repeated across the area. */
 function tileBackground(fill: string, opacity: number): string {
@@ -25,7 +27,7 @@ function tileBackground(fill: string, opacity: number): string {
 /**
  * Interactive background: a faint tiled grid of initials with an accent
  * "spotlight" that follows the cursor (written to CSS variables, so no React
- * re-render). Static under reduced motion.
+ * re-render). Smaller spotlight on touch screens. Static under reduced motion.
  */
 export function HeroWordGrid() {
   const reduced = useReducedMotionPref();
@@ -38,10 +40,14 @@ export function HeroWordGrid() {
     const highlight = highlightRef.current;
     if (!container || !highlight) return;
 
+    // Use a smaller spotlight radius on touch/mobile devices
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    const mask = isTouch ? MASK_TOUCH : MASK_DESKTOP;
+    highlight.style.maskImage = mask;
+    (highlight.style as CSSStyleDeclaration & { webkitMaskImage: string }).webkitMaskImage = mask;
+
     let rect = container.getBoundingClientRect();
-    const updateRect = () => {
-      rect = container.getBoundingClientRect();
-    };
+    const updateRect = () => { rect = container.getBoundingClientRect(); };
     const onMove = (event: PointerEvent) => {
       highlight.style.setProperty("--x", `${event.clientX - rect.left}px`);
       highlight.style.setProperty("--y", `${event.clientY - rect.top}px`);
@@ -78,8 +84,8 @@ export function HeroWordGrid() {
           style={{
             backgroundImage: tileBackground(ACCENT, 1),
             backgroundRepeat: "repeat",
-            maskImage: HIGHLIGHT_MASK,
-            WebkitMaskImage: HIGHLIGHT_MASK,
+            maskImage: MASK_DESKTOP,
+            WebkitMaskImage: MASK_DESKTOP,
             filter: "drop-shadow(0 0 6px rgb(255 59 59 / 0.5))",
           }}
         />

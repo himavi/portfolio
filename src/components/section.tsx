@@ -32,7 +32,7 @@ export function Section({
     >
       <div
         className={cn(
-          "mx-auto w-full max-w-6xl px-6 py-24 sm:px-8 sm:py-32",
+          "mx-auto w-full max-w-6xl px-4 py-16 sm:px-8 sm:py-24 lg:py-32",
           containerClassName,
         )}
       >

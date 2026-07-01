@@ -29,7 +29,7 @@ const groups = [
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="02 — Stack" title="Skills & tooling">
+    <Section id="skills" eyebrow="Stack" title="Skills & tooling">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {groups.map((group, index) => (
           <Reveal key={group.label} delay={index * 0.05}>
