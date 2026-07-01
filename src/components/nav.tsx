@@ -72,8 +72,6 @@ export function Nav() {
         <div className="flex items-center gap-2">
           <a
             href={siteConfig.resumeHref}
-            target="_blank"
-            rel="noreferrer"
             className="hidden rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent md:inline-flex"
           >
             Resume
@@ -143,8 +141,6 @@ export function Nav() {
               <li>
                 <a
                   href={siteConfig.resumeHref}
-                  target="_blank"
-                  rel="noreferrer"
                   onClick={() => setOpen(false)}
                   className="mt-1 block rounded-md px-2 py-2 text-base font-medium text-accent"
                 >

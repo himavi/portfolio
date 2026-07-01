@@ -10,7 +10,7 @@ export const siteConfig = {
     github: "https://github.com/himavi",
     linkedin: "https://www.linkedin.com/in/himakumarsingh",
   },
-  resumeHref: "/resume.pdf",
+  resumeHref: "/resume",
 } as const;
 
 export interface NavSection {
