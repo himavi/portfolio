@@ -3,6 +3,17 @@ import { Section } from "@/components/section";
 
 const roles = [
   {
+    role: "Software Engineering Intern – RPC Load Balancer",
+    org: "Jio Platforms Limited",
+    period: "Dec 2023 – Feb 2024",
+    points: [
+      "Built a production-grade Ethereum JSON-RPC load balancer with intelligent routing, circuit breaking, and failover mechanisms.",
+      "Implemented Redis-based caching and request deduplication to reduce latency and optimize throughput.",
+      "Designed health-check systems with automatic provider monitoring and failure recovery.",
+      "Integrated observability using Prometheus and Grafana for real-time metrics and alerting.",
+    ],
+  },
+  {
     role: "Software Engineering Intern",
     org: "IIT Jammu",
     period: "May 2025 – Jul 2025",
