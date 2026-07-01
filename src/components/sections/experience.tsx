@@ -5,7 +5,7 @@ const roles = [
   {
     role: "Software Engineering Intern – RPC Load Balancer",
     org: "Jio Platforms Limited",
-    period: "Dec 2023 – Feb 2024",
+    period: "Dec 2025 – Feb 2026",
     points: [
       "Built a production-grade Ethereum JSON-RPC load balancer with intelligent routing, circuit breaking, and failover mechanisms.",
       "Implemented Redis-based caching and request deduplication to reduce latency and optimize throughput.",
