@@ -8,7 +8,7 @@ export const siteConfig = {
   email: "himakumarsingh@gmail.com",
   socials: {
     github: "https://github.com/himavi",
-    linkedin: "https://www.linkedin.com/in/your-handle",
+    linkedin: "https://www.linkedin.com/in/himakumarsingh",
   },
   resumeHref: "/resume.pdf",
 } as const;

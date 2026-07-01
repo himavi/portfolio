@@ -4,13 +4,13 @@ import { siteConfig } from "@/lib/site";
 
 export function Contact() {
   return (
-    <Section id="contact" eyebrow="05 — Contact" title="Let's talk">
+    <Section id="contact" eyebrow="Contact" title="Let's talk">
       <Reveal>
         <div className="max-w-xl">
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m actively looking for full-stack and AI/ML engineering
             roles. If you&apos;re building something ambitious and want someone
-            who can own it end-to-end — let&apos;s talk.
+            who can own it end-to-end, let&apos;s talk.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

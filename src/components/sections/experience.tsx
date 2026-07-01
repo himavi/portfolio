@@ -3,30 +3,21 @@ import { Section } from "@/components/section";
 
 const roles = [
   {
-    role: "Full Stack & AI/ML Engineer",
-    org: "Freelance / Independent",
-    period: "2023 — Present",
+    role: "Software Engineering Intern",
+    org: "IIT Jammu",
+    period: "May 2025 – Jul 2025",
     points: [
-      "Designed and shipped production web applications integrating LLM-powered features — from architecture through deployment.",
-      "Built an autonomous AI penetration-testing agent (Python, Docker, Hugging Face Spaces) capable of identifying web vulnerabilities and generating actionable security reports.",
-      "Developed ExamSense, a full-stack exam management platform, handling both frontend UX and backend API design.",
-    ],
-  },
-  {
-    role: "AI/ML Project Developer",
-    org: "Academic & Open Source",
-    period: "2022 — 2023",
-    points: [
-      "Built RedSeaCatchAI — automated reef fisheries monitoring using YOLOv11-seg and biomass estimation for marine conservation research.",
-      "Developed IntelliDocs — an OpenAI-powered PDF Q&A tool with OCR support for scanned documents.",
-      "Completed JP Morgan Advanced Software Engineering programme (Forage), contributing to financial data tooling.",
+      "Built a MERN stack Lost & Found platform adopted by 500+ students, enabling real-time item reporting, search, and claim tracking.",
+      "Improved frontend responsiveness by 40% using React.js and Tailwind CSS; developed 12+ RESTful APIs secured with JWT authentication.",
+      "Modeled 5+ MongoDB collections, integrated image uploads via Cloudinary, and automated email notifications achieving a 95% delivery rate.",
+      "Collaborated with IIT Jammu mentors and managed version control and production deployment using Git.",
     ],
   },
 ];
 
 export function Experience() {
   return (
-    <Section id="experience" eyebrow="04 — Path" title="Experience">
+    <Section id="experience" eyebrow="Experience" title="Experience">
       <ol className="relative space-y-10 border-l border-border pl-6">
         {roles.map((role, index) => (
           <li key={`${role.role}-${role.period}`} className="relative">
