@@ -99,8 +99,7 @@ function Project({
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-white text-neutral-800">
-      <div className="mx-auto max-w-2xl px-6 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-2xl px-6 py-12 sm:px-8 sm:py-16">
 
         {/* Back link */}
         <Link
@@ -265,7 +264,6 @@ export default function ResumePage() {
           Himanshu Kumar Singh · 2026 · Delhi, IN
         </p>
 
-      </div>
     </div>
   );
 }
