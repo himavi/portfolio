@@ -262,7 +262,7 @@ export default function ResumePage() {
 
         {/* Footer */}
         <p className="mt-12 text-xs text-neutral-300">
-          Himanshu Kumar Singh · 2025 · Vellore, IN
+          Himanshu Kumar Singh · 2026 · Delhi, IN
         </p>
 
       </div>
